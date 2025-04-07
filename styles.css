@@ -1,0 +1,206 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e fundo */
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff url('https://www.w3schools.com/w3images/pond.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #000000;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #027ba3;
+    color: #000000;
+    border-bottom: 5px solid #036789;
+}
+
+header .logo img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+}
+
+.header-content {
+    margin-right: 50%;
+    transform: translateX(50%);
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #fff;
+}
+
+/* Layout */
+.content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Mudança para coluna */
+    align-items: center; /* Centraliza os itens */
+}
+
+/* Caixas de texto */
+.text-container {
+    flex: 1 1 calc(40% - 20px); /* Ajuste para caixas ocuparem 40% da largura */
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 2px solid #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    margin: 10px; /* Espaçamento entre as caixas */
+}
+
+.text-box h2 {
+    color: #027ba3;
+    margin-bottom: 10px;
+}
+
+.text-box p, .text-box ul {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.text-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.text-box ul li {
+    margin-bottom: 10px;
+}
+
+/* Efeito de zoom nas caixas de texto */
+.text-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Divisão das caixas em 4 (2 em cima e 2 embaixo) */
+.top-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Contêiner de imagens */
+.image-container {
+    flex: 1 1 100%; /* As imagens ocupam toda a linha */
+    display: flex;
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    gap: 20px; /* Espaçamento entre as imagens */
+    margin-top: 20px; /* Espaçamento acima das imagens */
+}
+
+.images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.responsive-img,
+.responsive-img1 {
+    width: calc(50% - 20px); /* Ajuste para imagem com maior largura */
+    height: auto;
+    border-radius: 10px; /* Arredonda os cantos das imagens */
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.responsive-img:hover, 
+.responsive-img1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagens abaixo das caixas */
+.bottom-image {
+    width: 80%; /* Ajuste a largura conforme necessário */
+    max-width: 250px; /* Limite a largura máxima para não ficar muito grande */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 10px; /* Espaçamento entre as imagens */
+    border-radius: 15px; /* Arredonda os cantos das imagens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+.bottom-image:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais intensa ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    font-size: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-container {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+ /* Contêiner de imagens */
+.image-container1 {
+    flex: 1 1 100%; /* As imagens ocupam toda a linha */
+    display: flex;
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    gap: 20px; /* Espaçamento entre as imagens */
+    margin-top: 20px; /* Espaçamento acima das imagens */
+}
+
+    .responsive-img, 
+    .responsive-img1 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 30px 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header .logo img {
+        max-width: 80px;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+
+    .responsive-img {
+        width: 100%;
+    }
+}
